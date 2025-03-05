@@ -1,0 +1,17 @@
+{
+    "name": "tosyeno-web-app",
+    "version": "1.0.0",
+    "description": "Sample web application for Helm deployment",
+    "main": "src/app.js",
+    "scripts": {
+      "start": "node src/app.js",
+      "build": "echo 'Add your build script here'",
+      "test": "echo 'Add your test script here'"
+    },
+    "dependencies": {
+      "express": "^4.18.2"
+    },
+    "devDependencies": {
+      "jest": "^29.7.0"
+    }
+  }

@@ -1,0 +1,23 @@
+environment: staging
+replicaCount: 2
+
+image:
+  repository: your-registry.io/sample-web-app
+  tag: stable
+  pullPolicy: IfNotPresent
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 250m
+    memory: 256Mi
+
+ingress:
+  enabled: true
+  hosts:
+    - host: staging.app.example.com
+      paths:
+        - path: /
+          pathType: Prefix

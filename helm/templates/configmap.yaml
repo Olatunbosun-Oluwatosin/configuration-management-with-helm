@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+  labels:
+    {{- include "sample-web-app.labels" . | nindent 4 }}
+data:
+  NODE_ENV: {{ .Values.environment }}
+  APP_CONFIG: |
+    {
+      "appName": "Sample Web App",
+      "environment": {{ .Values.environment | quote }},
+      "version": {{ .Chart.AppVersion | quote }}
+    }
